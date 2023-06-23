@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+
+html{
+    font-size: 112.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    display: flex;
+    background-color: #add8ff;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: center;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 8px 15px;
+    background: #b4dbff;
+    border-radius: 30px;
+    color: #383838;
+    box-shadow: 2.5px 2.5px 2.5px -0.25px rgba(0, 0, 0, 0.16),-2.5px -2.5px 2.5px -0.25px rgba(255, 255, 255, 0.7);
+   
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+}
+.nav__list li a{
+    color: #383838;
+}
+.nav__item{
+    margin: 0 30px;
+}
+
+.nav__link{
+   padding: 10px;
+   color: #000;
+   font: 0.9rem;
+   font-weight: 500;
+   border-radius: 5px;
+}
+
+.nav__link:hover{
+    background-color: #fff;
+}
+
+.header__toggle,
+.header__close{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px){
+    header {
+        height: 48px;
+        justify-content: space-between;
+        padding: 0 28px;
+    }
+    .logo img{
+        width: 30px;
+    }
+    .header__toggle{
+        display: inline;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+    }
+    .header__close{
+        position: absolute;
+        right: 24px;
+        display: block;
+        font-size: 24px;
+        border-radius: 50%;
+    }
+    .header__close:hover{
+        background-color: #add8ff;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #add8ff;
+        width: 60%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: 100;
+        transition: 0.5s;
+        border-radius: 0 0 0 50%;
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav__item{
+        margin: 2rem 0;
+
+    }
+    .show{
+        right: 0;
+    }
+}
+
+
